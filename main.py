@@ -7,6 +7,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/detail/<int:id>')
+def detail(id):
+    films_not_showed = get_person(id)
+    return render_template('details.html', films_not_showed=films_not_showed)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
