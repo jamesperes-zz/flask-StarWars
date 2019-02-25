@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css')}}">
+</head>
+<body>
+    <h2>Quais filmes eles não apareceram</h2>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Luke Skywalker</td>
+                <td>C3-PO</td>
+                <td>R2-D2</td>
+                <td>Darth Vader</td>
+            </tr>
+            <tr>
+                <td><a name="detalhe" id="detalhe" class="btn btn-primary" href="{{url_for('detail', id=1) }}" role="button">Detalhes</a></td>
+                <td><a name="detalhe" id="detalhe" class="btn btn-primary" href="{{url_for('detail', id=2) }}" role="button">Detalhes</a></td>
+                <td><a name="detalhe" id="detalhe" class="btn btn-primary" href="{{url_for('detail', id=3) }}" role="button">Detalhes</a></td>
+                <td><a name="detalhe" id="detalhe" class="btn btn-primary" href="{{url_for('detail', id=4) }}" role="button">Detalhes</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
