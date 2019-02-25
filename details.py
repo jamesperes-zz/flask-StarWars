@@ -10,24 +10,24 @@ def get_all_film():
 
 
 def get_films_by_person(list_films):
-    films_showed = []
-    films_not_showed = []
+    films_participating = []
+    films_not_participating = []
     all_films = get_all_film()
 
     for film in list_films:
         film_data = requests.get(film).json()
-        films_showed.append({'id': film_data['episode_id'], 'title': film_data['title']})
+        films_participating.append({'id': film_data['episode_id'], 'title': film_data['title']})
 
     for film in all_films:
-        if film not in films_showed:
-            films_not_showed.append(film)
+        if film not in films_participating:
+            films_not_participating.append(film)
     
-    return films_not_showed
+    return films_not_participating
 
 
-def get_person(id):
+def get_person_films_not_participated(id):
     url   = f'https://swapi.co/api/people/{id}/?format=json'
     data  = requests.get(url)
     films = data.json()['films']
-    films_showed = get_films_by_person(films)
-    return films_showed
+    films_participating = get_films_by_person(films)
+    return films_participating
