@@ -1,0 +1,9 @@
+branch-defaults:
+  master:
+    environment: $MASTER-flask-StarWars
+global:
+  application_name: FilmesStarWars
+  default_ec2_keyname: Flask-StarWars
+  default_platform: Docker running on 64bit Amazon Linux/2.12.9
+  default_region: eu-west-1
+  sc: git
