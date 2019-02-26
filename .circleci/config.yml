@@ -6,15 +6,7 @@ jobs:
       - image: circleci/python:3.7.2
     steps:
       - checkout
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            python -m unittest
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
-
+      
       - run:
           name: Installing deployment dependencies
           working_directory: /
