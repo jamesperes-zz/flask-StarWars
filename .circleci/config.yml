@@ -16,7 +16,11 @@ jobs:
       # - image: circleci/postgres:9.4
 
     working_directory: ~/repo
-
+    jobs:
+      build:
+        branches:
+          only:
+            - develop
     steps:
       - checkout
 
@@ -48,7 +52,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python -m unittest
 
       - store_artifacts:
           path: test-reports
