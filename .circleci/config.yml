@@ -10,11 +10,11 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python -m unittest
       - store_artifacts:
           path: test-reports
           destination: test-reports
-          
+
       - run:
           name: Installing deployment dependencies
           working_directory: /
