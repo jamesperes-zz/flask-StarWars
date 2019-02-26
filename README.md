@@ -13,21 +13,21 @@ ___
 
 #### Pontos da Ideia:
 
-Montar um Micro serviço onde recebe uma API
-Não usar nenhum banco de dados
-usar Docker
-Rodar CI 
-Deploy automático
++ Montar um Micro serviço onde recebe uma API
++ Não usar nenhum banco de dados
++ usar Docker
++ Rodar CI 
++ Deploy automático
 
 ___
 
 #### Usado:
 
-API do Star Wars - [link](https://swapi.co/)
-Flask 
-Docker
-CircleCI
-Elastic Beanstalk
++ API do Star Wars - [link](https://swapi.co/)
++ Flask 
++ Docker
++ CircleCI
++ Elastic Beanstalk
 
 ___
 
@@ -38,7 +38,8 @@ make build_flask
 make start_flask
 ```
 
+___
 
-::: warning
+```
 *Projeto usado só tutoriais basicos com a ideia de mostrar a iniciantes*
-:::
+```
